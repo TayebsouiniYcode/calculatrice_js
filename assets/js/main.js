@@ -16,6 +16,7 @@ let additionOperateur = document.getElementById("addition");
 let soustractionOperateur = document.getElementById('soustraction');
 let multiplicationOperateur = document.getElementById('multiplication');
 let divisionOperateur = document.getElementById('division');
+let dot = document.getElementById('dot');
 let equals = document.getElementById('equals');
 
 let ecran = document.getElementById('ecran');
@@ -57,10 +58,15 @@ function operate(num1, num2, operateur) {
     }
 }
 
-
-
 numberOne.addEventListener("click", function() {
     ecran.value += 1;    
+});
+
+dot.addEventListener("click", function(){
+    let isContain = ecran.value.indexOf(".");
+    if (isContain == -1 ){
+        ecran.value += ".";
+    }
 });
 
 numberTwo.addEventListener("click", function() { ecran.value += 2;});
