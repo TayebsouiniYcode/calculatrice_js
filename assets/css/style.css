@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.container {
+    display: flex;
+    background: #E5E5E5;
+}
+
+.calculatrice {
+    margin: 1rem auto;
+    background-color: #242530;
+}
+
+.ecran {
+    height: 40vh;
+    width: 250px;
+    background : #242530;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 62px);
+    grid-template-rows: repeat(5, 62px);
+    justify-content: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.buttons > * {
+    background-color: #363746;
+    border: solid 1px #242530;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#egale {
+    grid-column: 4/5;
+    grid-row: 4/6;
+    background: #FFBB00;
+}
+
+#clean {
+    border-radius: 20px 0 0 0;
+}
+
+#supprimer {
+    border-radius: 0px 20px 0 0;
+}
+
+.operator {
+    color: #FFBB00;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.number {
+    background: #2E2F3E;
+}
