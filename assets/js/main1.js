@@ -56,8 +56,9 @@ function operate(num1, num2, operateur) {
     } else {
         return false;
     }
-}
+}   
 
+document.getElementsByClassName
 numberOne.addEventListener("click", function() {
     ecran.value += 1;    
 });
