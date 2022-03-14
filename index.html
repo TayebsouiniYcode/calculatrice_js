@@ -11,31 +11,33 @@
     <div class="container">
         <div class="calculatrice">
             <div class="ecran">
-                <div class="operation">23 + 4</div>
-                <div class="result">= 27</div>
+                <div class="operation" id="operation">0</div>
+                <div class="result" id="ecran">= 0</div>
             </div>
             <div class="buttons">
-                <div class="btn" id="clean">C</div>
-                <div class="btn operator" id="division">/</div>
-                <div class="btn operator" id="multiplication">*</div>
-                <div class="btn operator" id="supprimer"> S </div>
-                <div class="btn number" id="sept">7</div>
-                <div class="btn number" id="huit">8</div>
-                <div class="btn number" id="neuf">9</div>
-                <div class="btn operator" id="soustraction">-</div>
-                <div class="btn number" id="quatre">4</div>
-                <div class="btn number" id="cinq">5</div>
-                <div class="btn number" id="six">6</div>
-                <div class="btn operator" id="addition">+</div>
-                <div class="btn number" id="un">1</div>
-                <div class="btn number" id="deux">2</div>
-                <div class="btn number" id="trois">3</div>
-                <div class="btn" id="egale">=</div>
-                <div class="btn number" id="modulo">%</div>
-                <div class="btn number" id="zero">0</div>
-                <div class="btn number" id="vergule">.</div>
+                <div data-value="c" class="btn" id="clean">C</div>
+                <div data-value="/" class="btn operator" id="division">/</div>
+                <div data-value="*" class="btn operator" id="multiplication">*</div>
+                <div data-value="s" class="btn operator" id="supprimer"> S </div>
+                <div data-value="7" class="btn number" id="sept">7</div>
+                <div data-value="8" class="btn number" id="huit">8</div>
+                <div data-value="9" class="btn number" id="neuf">9</div>
+                <div data-value="-" class="btn operator" id="soustraction">-</div>
+                <div data-value="4" class="btn number" id="quatre">4</div>
+                <div data-value="5" class="btn number" id="cinq">5</div>
+                <div data-value="6" class="btn number" id="six">6</div>
+                <div data-value="+" class="btn operator" id="addition">+</div>
+                <div data-value="1" class="btn number" id="un">1</div>
+                <div data-value="2" class="btn number" id="deux">2</div>
+                <div data-value="3" class="btn number" id="trois">3</div>
+                <div data-value="=" class="btn" id="egale">=</div>
+                <div data-value="%" class="btn number" id="modulo">%</div>
+                <div data-value="0" class="btn number" id="zero">0</div>
+                <div data-value="." class="btn number" id="vergule">.</div>
             </div>
         </div>
     </div>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
