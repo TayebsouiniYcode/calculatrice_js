@@ -4,22 +4,31 @@ let buttons = document.querySelectorAll(".btn");
 let operation = document.getElementById("operation");
 let ecran = document.getElementById("ecran");
 let values = new Array();
-//let smartValues = new Array();
 let number = "";
 
 buttons.forEach(btn => {
     btn.addEventListener("click", function(){
         let content = this.getAttribute('data-value');
-        if (operation.innerText == "0"){
+        if (operation.innerText == "0" && content != "."){
             operation.innerText = "";
         }
         if (content == "c"){
             values.length = 0;
             operation.innerText = "0";
-        } else  {
+        } else {
             switch (content) {
-                case "+":
                 case "-":
+                    if (number == ""){
+                        values.push("0");
+                        values.push(content);
+                        operation.innerText += content;
+                    } else {
+                        values.push(number);
+                        values.push(content);
+                        operation.innerText += content;
+                    }
+                    break;
+                case "+":
                 case "/":
                 case "*":
                     // values [result, "", "+"];
@@ -62,7 +71,7 @@ egale.addEventListener("click", function(){
         }
     }
     if (values.length == 1) {
-        ecran.innerText = values[0];
+        ecran.innerText = parseFloat(values[0]);
     } else {
         let result = eval(values[0] + values[1] + values[2]);
         if (values.length > 2) {
